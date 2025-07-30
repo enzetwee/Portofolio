@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CERTIFICATES | NAZWA NURSILLIYAH INADITA PUTRI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .tab-button.active {
+      background-color: #4a5568;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+  <header class="p-6 bg-gray-800 shadow-md">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <h1 class="text-xl font-bold">NAZWA NURSILLIYAH INADITA PUTRI</h1>
+      <nav>
+        <ul class="flex space-x-4">
+          <li><a href="index.html" class="hover:underline">PROFIL</a></li>
+          <li><a href="projects.html" class="hover:underline">PROJECT</a></li>
+          <li><a href="experience.html" class="hover:underline">EXPERIENCE</a></li>
+          <li><a href="education.html" class="hover:underline">EDUCATION</a></li>
+          <li><a href="certificates.html" class="underline font-semibold">CERTIFICATES</a></li>
+          <li><a href="contact.html" class="hover:underline">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-6 py-10">
+    <h2 class="text-3xl font-bold mb-8">CERTIFICATES</h2>
+
+    <div class="mb-6 space-x-2">
+      <button id="webinar-btn" onclick="showTab('webinar', this)" class="tab-button px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded">Webinar / Pelatihan</button>
+    </div>
+
+    <div class="flex flex-col lg:flex-row gap-6">
+      <div class="w-full lg:w-1/4 space-y-3">
+        <div id="tab-webinar" class="tab-content">
+          <a href="assets/certificates/Sertifikat Try Out Jarvis.pdf" download class="block w-full bg-gray-800 hover:bg-gray-700 p-2 rounded text-left" onclick="showFile('assets/certificates/Sertifikat Try Out Jarvis.pdf'); return false;">Try Out Jarvis</a>
+          <a href="assets/certificates/Sertifikat Math Creativity_Analisis Data dengan Microsoft Excel.pdf" download class="block w-full bg-gray-800 hover:bg-gray-700 p-2 rounded text-left" onclick="showFile('assets/certificates/Sertifikat Math Creativity_Analisis Data dengan Microsoft Excel.pdf'); return false;">Math Creativity – Excel</a>
+          <a href="assets/certificates/Sertifikat Math Creativity1_Data Science with Python.pdf" download class="block w-full bg-gray-800 hover:bg-gray-700 p-2 rounded text-left" onclick="showFile('assets/certificates/Sertifikat Math Creativity1_Data Science with Python.pdf'); return false;">Math Creativity – Python</a>
+          <a href="assets/certificates/Sertifikat Eco Friendly for Optimize Our Environtment.jpg" download class="block w-full bg-gray-800 hover:bg-gray-700 p-2 rounded text-left" onclick="showFile('assets/certificates/Sertifikat Eco Friendly for Optimize Our Environtment.jpg'); return false;">Eco Friendly Environment</a>
+        </div>
+      </div>
+
+      <div class="w-full lg:w-3/4">
+        <div id="viewer-container" class="w-full rounded border border-gray-700 overflow-hidden">
+          <!-- Try Out Jarvis will be auto loaded here -->
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="p-4 bg-gray-800 text-center text-sm mt-20">
+    &copy; 2025 NAZWA NURSILLIYAH INADITA PUTRI. All rights reserved.
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const webinarBtn = document.getElementById('webinar-btn');
+      showTab('webinar', webinarBtn);
+      showFile('assets/certificates/Sertifikat Try Out Jarvis.pdf');
+    });
+
+    function showTab(tabName, clickedButton) {
+      const tabButtons = document.querySelectorAll('.tab-button');
+      tabButtons.forEach(button => button.classList.remove('active'));
+      clickedButton.classList.add('active');
+
+      const tabs = document.querySelectorAll('.tab-content');
+      tabs.forEach(tab => tab.classList.add('hidden'));
+
+      document.getElementById(`tab-${tabName}`).classList.remove('hidden');
+    }
+
+    function showFile(filePath) {
+      const viewerContainer = document.getElementById('viewer-container');
+      const extension = filePath.split('.').pop().toLowerCase();
+
+      if (extension === 'pdf') {
+        viewerContainer.innerHTML = `<embed src="${filePath}" type="application/pdf" width="100%" height="600px" class="rounded border border-gray-700" />`;
+      } else if (['jpg', 'jpeg', 'png'].includes(extension)) {
+        viewerContainer.innerHTML = `<img src="${filePath}" alt="Certificate" class="w-full rounded border border-gray-700 shadow-md" />`;
+      } else {
+        viewerContainer.innerHTML = `<p class="text-red-400 p-4">File format not supported for preview. Please download to view.</p>`;
+      }
+    }
+  </script>
+</body>
+</html>

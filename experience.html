@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EXPERIENCE | NAZWA NURSILLIYAH INADITA PUTRI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Global styles for main tabs */
+    .main-tab-button.active {
+      background-color: #4a5568; /* Darker gray for active main tab */
+    }
+    /* Specific styles for internship sub-tabs */
+    .internship-sub-tab-button.active {
+      background-color: #4a5568; /* Darker gray for active sub-tab */
+    }
+    /* Styles for expandable event items */
+    .event-item {
+      cursor: pointer; /* Indicate clickability */
+      padding: 12px;
+      background-color: #1f2937; /* Darker background for clickable items */
+      border-radius: 8px;
+      transition: background-color 0.2s ease-in-out;
+    }
+    .event-item:hover {
+      background-color: #374151; /* Slightly lighter on hover */
+    }
+    .event-item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .event-item-header span {
+      transition: transform 0.3s ease-in-out;
+    }
+    .event-item-header.active span {
+      transform: rotate(90deg); /* Rotate arrow when active */
+    }
+    .event-documentation {
+      margin-top: 16px;
+      border-top: 1px solid #374151; /* Separator line */
+      padding-top: 16px;
+    }
+
+    /* Gallery grid for documentation images */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Sesuaikan minmax jika perlu */
+      gap: 16px;
+    }
+    .gallery-grid img {
+      width: 100%;
+      height: auto; /* Penting: atur tinggi otomatis */
+      max-height: 250px; /* Opsional: Atur tinggi maksimum agar tidak terlalu besar */
+      object-fit: contain; /* Penting: agar gambar tidak terpotong dan terlihat utuh */
+      border-radius: 8px;
+      background-color: #00000000; /* Opsional: background hitam untuk gambar PNG transparan atau gambar dengan area kosong agar terlihat jelas */
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+  <header class="p-6 bg-gray-800 shadow-md">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <h1 class="text-xl font-bold">NAZWA NURSILLIYAH INADITA PUTRI</h1>
+      <nav>
+        <ul class="flex space-x-4">
+          <li><a href="index.html" class="hover:underline">PROFIL</a></li>
+          <li><a href="projects.html" class="hover:underline">PROJECT</a></li>
+          <li><a href="experience.html" class="underline font-semibold">EXPERIENCE</a></li>
+          <li><a href="education.html" class="hover:underline">EDUCATION</a></li>
+          <li><a href="certificates.html" class="hover:underline">CERTIFICATES</a></li>
+          <li><a href="contact.html" class="hover:underline">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-6 py-10">
+    <h2 class="text-3xl font-bold mb-8">EXPERIENCE</h2>
+
+    <div class="mb-6 space-x-2">
+      <button onclick="showMainTab('internship', this)" class="main-tab-button px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded active">Internship</button>
+      <button onclick="showMainTab('organizational', this)" class="main-tab-button px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded">Organizational</button>
+      <button onclick="showMainTab('volunteer', this)" class="main-tab-button px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded">Volunteer</button>
+    </div>
+
+    <div id="main-tab-internship" class="main-tab-content">
+      <section class="space-y-8">
+        <div>
+          <h3 class="text-xl font-semibold">Internship – PT. Indocement Tunggal Prakarsa Tbk.</h3>
+          <p class="text-sm text-gray-400">Aug 2024 – Dec 2024</p>
+          <p class="mt-2 text-gray-300">
+            I completed my internship at PT Indocement Tunggal Prakarsa Tbk., assigned to the Electrical and Instrument Department at Plant 3/4 Citeureup.
+          </p>
+          <p class="mt-1 text-gray-300">
+            I contributed to instrument calibration, documentation, and web-based inventory system development using PHP & MySQL. This role also gave me practical experience in HSE practices, welding techniques, and workshop operations.
+          </p>
+
+          <div class="mt-8">
+            <h4 class="text-2xl font-semibold mb-4">Proof & Documentation</h4>
+
+            <div class="mb-4 space-x-2">
+              <button onclick="showInternshipSubTab('proof', this)" class="internship-sub-tab-button px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded active">Internship Proof (PDF)</button>
+              <button onclick="showInternshipSubTab('docs', this)" class="internship-sub-tab-button px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded">Documentation</button>
+            </div>
+
+            <div id="internship-sub-tab-proof" class="internship-sub-tab-content w-full rounded border border-gray-700 overflow-hidden" style="min-height: 500px;">
+              <embed src="assets/experiences/Bukti_Intern.pdf" type="application/pdf" width="100%" height="600px" class="rounded border border-gray-700" />
+            </div>
+
+            <div id="internship-sub-tab-docs" class="internship-sub-tab-content hidden">
+              <div class="gallery-grid">
+                <img src="assets/experiences/with instrument superintendent.jpg" alt="Internship Documentation 1" class="rounded shadow-md">
+                <img src="assets/experiences/daily routine-safety pray.jpg" alt="Internship Documentation 2" class="rounded shadow-md">
+                <img src="assets/experiences/maintenance SP.jpg" alt="Internship Documentation 3" class="rounded shadow-md">
+                <img src="assets/experiences/calibration bag counting.jpg" alt="Internship Documentation 4" class="rounded shadow-md">
+                <img src="assets/experiences/welding.jpg" alt="Internship Documentation 5" class="rounded shadow-md">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div id="main-tab-organizational" class="main-tab-content hidden">
+      <section>
+        <h3 class="text-xl font-semibold mb-4">Organizational Involvement</h3>
+        <div class="space-y-4">
+          <div class="event-item" onclick="toggleEventDocumentation('parikesit-docs', this)">
+            <div class="event-item-header">
+              <h4 class="text-lg font-medium">Staff Electrical, Kelompok Studi Mahasiswa Teknik Mesin PARIKESIT – (2022 - 2024)</h4>
+              <span class="text-xl transform">&#9658;</span> </div>
+            <div id="parikesit-docs" class="event-documentation hidden">
+              <p class="text-gray-400 mb-2">Documentation for PARIKESIT:</p>
+              <div class="gallery-grid">
+                <img src="assets/experiences/Parikesit 1.jpg" alt="PARIKESIT Doc 1" class="rounded shadow-md">
+                <img src="assets/experiences/Parikesit 2.jpg" alt="PARIKESIT Doc 2" class="rounded shadow-md">
+                <img src="assets/experiences/Parikesit 3.jpg" alt="PARIKESIT Doc 2" class="rounded shadow-md">
+              </div>
+            </div>
+          </div>
+
+          <div class="event-item" onclick="toggleEventDocumentation('psychorobotic-docs', this)">
+            <div class="event-item-header">
+              <h4 class="text-lg font-medium">Staff P&K, Kelompok Studi Mahasiswa Teknik Elektro Psychorobotic – (2023 - 2024)</h4>
+              <span class="text-xl transform">&#9658;</span>
+            </div>
+            <div id="psychorobotic-docs" class="event-documentation hidden">
+              <p class="text-gray-400 mb-2">Documentation for Psychorobotic:</p>
+              <div class="gallery-grid">
+                <img src="assets/experiences/psychorobotic.jpg" alt="Psychorobotic Doc 1" class="rounded shadow-md">
+              </div>
+            </div>
+          </div>
+
+          <div class="event-item" onclick="toggleEventDocumentation('pesilat-docs', this)">
+            <div class="event-item-header">
+              <h4 class="text-lg font-medium">PESILAT POLITEKNIK JAKARTA – (2022 - 2024)</h4>
+              <span class="text-xl transform">&#9658;</span>
+            </div>
+            <div id="pesilat-docs" class="event-documentation hidden">
+              <p class="text-gray-400 mb-2">Documentation for PESILAT:</p>
+              <div class="gallery-grid">
+                <img src="assets/experiences/pelita 1.jpg" alt="PESILAT Doc 1" class="rounded shadow-md">
+                <img src="assets/experiences/pelita 2.jpg" alt="PESILAT Doc 1" class="rounded shadow-md">
+                <img src="assets/experiences/pelita 3.jpg" alt="PESILAT Doc 1" class="rounded shadow-md">
+                <img src="assets/experiences/pelita 4.jpg" alt="PESILAT Doc 1" class="rounded shadow-md">
+                <img src="assets/experiences/pelita 5.jpg" alt="PESILAT Doc 1" class="rounded shadow-md">
+                <img src="assets/experiences/pelita 6.jpg" alt="PESILAT Doc 1" class="rounded shadow-md">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div id="main-tab-volunteer" class="main-tab-content hidden">
+      <section>
+        <h3 class="text-xl font-semibold mb-4">Volunteer & Social Projects</h3>
+        <div class="space-y-4">
+          <div class="event-item" onclick="toggleEventDocumentation('lps-marathon-docs', this)">
+            <div class="event-item-header">
+              <h4 class="text-lg font-medium">Crew, LPS Half Marathon – Potential Winner Escort (2025)</h4>
+              <span class="text-xl transform">&#9658;</span>
+            </div>
+            <div id="lps-marathon-docs" class="event-documentation hidden">
+              <p class="text-gray-400 mb-2">Documentation for LPS Half Marathon:</p>
+              <div class="gallery-grid">
+                <img src="assets/experiences/Potential winner LPS 1.jpg" alt="LPS Half Marathon Doc 1" class="rounded shadow-md">
+                <img src="assets\experiences\Potential winner LPS 2.jpg" alt="LPS Half Marathon Doc 1" class="rounded shadow-md">
+              </div>
+            </div>
+          </div>
+
+          <div class="event-item" onclick="toggleEventDocumentation('jcr-docs', this)">
+            <div class="event-item-header">
+              <h4 class="text-lg font-medium">Crew, Jakarta City Run (JCR) – Finisher (2025)</h4>
+              <span class="text-xl transform">&#9658;</span>
+            </div>
+            <div id="jcr-docs" class="event-documentation hidden">
+              <p class="text-gray-400 mb-2">Documentation for JCR:</p>
+              <div class="gallery-grid">
+                <img src="assets/experiences/Finisher JCR 1.jpg" alt="JCR Doc 1" class="rounded shadow-md">
+                <img src="assets\experiences\Finisher JCR 2.jpg" alt="JCR Doc 1" class="rounded shadow-md">
+              </div>
+            </div>
+          </div>
+
+          <div class="event-item" onclick="toggleEventDocumentation('etime-docs', this)">
+            <div class="event-item-header">
+              <h4 class="text-lg font-medium">Crew, Electro Activities Programme (ETime) – Div.Cobot (2024)</h4>
+              <span class="text-xl transform">&#9658;</span>
+            </div>
+            <div id="etime-docs" class="event-documentation hidden">
+              <p class="text-gray-400 mb-2">Documentation for ETime:</p>
+              <div class="gallery-grid">
+                <img src="assets/experiences/E-Time 1.jpg" alt="ETime Doc 1" class="rounded shadow-md">
+                <img src="assets/experiences/E-Time 2.jpg" alt="ETime Doc 1" class="rounded shadow-md">
+              </div>
+            </div>
+          </div>
+
+          <div class="event-item" onclick="toggleEventDocumentation('op-docs', this)">
+            <div class="event-item-header">
+              <h4 class="text-lg font-medium">Crew, Olimpiade Politenik (OP) – Div.Kompetisi (2024)</h4>
+              <span class="text-xl transform">&#9658;</span>
+            </div>
+            <div id="op-docs" class="event-documentation hidden">
+              <p class="text-gray-400 mb-2">Documentation for OP:</p>
+              <div class="gallery-grid">
+                <img src="assets\experiences\OP 1.jpg" alt="OP Doc 1" class="rounded shadow-md">
+                <img src="assets\experiences\OP 2.jpg" alt="OP Doc 1" class="rounded shadow-md">
+              </div>
+            </div>
+          </div>
+
+          <div class="event-item" onclick="toggleEventDocumentation('oe-docs', this)">
+            <div class="event-item-header">
+              <h4 class="text-lg font-medium">Crew, Olahraga Elektro (OE) – Div.Futsal (2023)</h4>
+              <span class="text-xl transform">&#9658;</span>
+            </div>
+            <div id="oe-docs" class="event-documentation hidden">
+              <p class="text-gray-400 mb-2">Documentation for OE:</p>
+              <div class="gallery-grid">
+                <img src="assets/experiences/Olahraga elektro 1.jpg" alt="OE Doc 1" class="rounded shadow-md">
+                <img src="assets\experiences\Olahraga elektro 2.jpg" alt="OE Doc 1" class="rounded shadow-md">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="p-4 bg-gray-800 text-center text-sm mt-20">
+    &copy; 2025 NAZWA NURSILLIYAH INADITA PUTRI. All rights reserved.
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      // Set the initial active main tab (Internship)
+      showMainTab('internship', document.querySelector('.main-tab-button'));
+      // Set the initial active sub-tab for Internship (Proof)
+      showInternshipSubTab('proof', document.querySelector('.internship-sub-tab-button'));
+    });
+
+    // Function to handle main tab switching (Internship, Organizational, Volunteer)
+    function showMainTab(tabName, clickedButton) {
+      // Deactivate all main tab buttons
+      const mainTabButtons = document.querySelectorAll('.main-tab-button');
+      mainTabButtons.forEach(button => button.classList.remove('active'));
+
+      // Activate the clicked main button
+      clickedButton.classList.add('active');
+
+      // Hide all main tab content
+      const mainTabs = document.querySelectorAll('.main-tab-content');
+      mainTabs.forEach(tab => tab.classList.add('hidden'));
+
+      // Show the selected main tab content
+      document.getElementById(`main-tab-${tabName}`).classList.remove('hidden');
+
+      // If switching to Organizational or Volunteer, ensure no event documentation is open
+      if (tabName !== 'internship') {
+          const allEventDocs = document.querySelectorAll('.event-documentation');
+          allEventDocs.forEach(doc => doc.classList.add('hidden'));
+          const allEventHeaders = document.querySelectorAll('.event-item-header');
+          allEventHeaders.forEach(header => header.classList.remove('active'));
+      }
+    }
+
+    // Function to handle sub-tab switching within the Internship section (Proof, Docs)
+    function showInternshipSubTab(tabName, clickedButton) {
+      // Deactivate all internship sub-tab buttons
+      const subTabButtons = document.querySelectorAll('.internship-sub-tab-button');
+      subTabButtons.forEach(button => button.classList.remove('active'));
+
+      // Activate the clicked sub-tab button
+      clickedButton.classList.add('active');
+
+      // Hide all internship sub-tab content
+      const subTabs = document.querySelectorAll('.internship-sub-tab-content');
+      subTabs.forEach(tab => tab.classList.add('hidden'));
+
+      // Show the selected sub-tab content
+      document.getElementById(`internship-sub-tab-${tabName}`).classList.remove('hidden');
+    }
+
+    // Function to toggle documentation for individual organizational/volunteer events
+    function toggleEventDocumentation(docId, clickedItem) {
+      const documentationDiv = document.getElementById(docId);
+      const headerDiv = clickedItem.querySelector('.event-item-header');
+
+      documentationDiv.classList.toggle('hidden');
+      headerDiv.classList.toggle('active'); // Toggle active class for arrow rotation
+    }
+  </script>
+</body>
+</html>
